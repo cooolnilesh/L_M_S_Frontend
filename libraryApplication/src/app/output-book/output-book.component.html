@@ -1,0 +1,54 @@
+<div class="body">
+  <button onCLick="history.back()">Home</button>
+
+  <a style="color: green" (click) = "logout()"
+    ><button style="float: right; background-color: #b4425b">Logout</button>
+  </a>
+
+  <div align="center" class="container" *ngIf="showResult; else elseBlock">
+    <h1>Book List</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>BookNo</th>
+      
+          <th>BookName</th>
+          <th>Author</th>
+          <th>Category</th>
+          <th>Edition</th>
+          <!-- <th>Return Date</th>
+          <th>Status</th> -->
+          <th *ngIf="isAdmin">Edit Book</th>
+          <th *ngIf="!isAdmin">Borrow Book</th>
+          <th *ngIf="isAdmin">Delete Book</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let book of Books">
+          <td>{{ book.id }}</td>
+          <td>{{ book.name }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.category }}</td>
+          <td>{{ book.edition }}</td>
+          <!-- <td>{{ book.returnDate }}</td>
+          <td>{{ this.checkAvailability(book.returnDate) }}</td> -->
+          <td><span *ngIf="isAdmin" ><a routerLink="/editBook" (click)="editBook(book)">
+            <!-- <span *ngIf="isAdmin">Edit</span> -->
+            <!-- <span *ngIf="!isAdmin">Borrow</span>  -->
+
+            Edit
+          </a></span><span *ngIf="!isAdmin"><a routerLink="/editBook" (click)="borrowBook(book)">Borrow</a></span></td>
+          <td *ngIf="isAdmin"><a (click)="deleteBook(book)" (click)="reloadPage()">Delete</a> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #elseBlock>
+  <div class="notFound">
+    <img class="notFoundImage" [src]="src" alt="notFound" />
+    <h1><b>Book Not Found In Database</b></h1>
+  </div>
+</ng-template>

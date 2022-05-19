@@ -1,0 +1,90 @@
+.body {
+  background-color: grey;
+  background-image: url("../../assets/images/image2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  padding-bottom: 20px;
+}
+
+.name {
+  text-align: right;
+  color: #ecf5f8;
+}
+
+h3 {
+  background-color: rgb(6, 10, 255);
+  font-size: 19px;
+  font-family: cursive;
+  color: whitesmoke;
+}
+
+.home {
+  font-family: "Dawning of a New Day";
+}
+
+.card1 {
+  height: auto;
+  width: 600px !important;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.card2 {
+  height: auto;
+  width: 300px !important;
+  display: inline-block;
+}
+
+.card1,
+.card2 {
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+
+  border-radius: 5px;
+  backdrop-filter: blur(14px);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  text-align: center;
+}
+
+.anchor2 {
+  background-color: teal;
+  border: 2px solid #3d1e00;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.anchor2:hover {
+  background-color: darkcyan;
+}
+
+.button {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px rgb(99, 96, 96);
+  margin: auto;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px rgb(59, 59, 59);
+  transform: translateY(6px);
+}
